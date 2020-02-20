@@ -1,0 +1,106 @@
+* {
+    margin: 0 auto;
+    padding: 0 auto;
+}
+
+.container {
+    width: 1000px;
+    background-image: linear-gradient(to right, rgb(53,34,42), rgb(111,89,100), rgb(53,34,42));
+}
+
+.container2{
+    width: 100%;
+}
+
+.header {
+    background-color: rgb(226, 226, 226);
+    width: 100%;
+}
+
+.title {
+    text-align: left;
+    width: 40%;
+    margin: 20px;
+}
+
+.subtitle {
+    text-align: right;
+    width: 50%;
+    margin: 20px;
+}
+
+.inline_block {
+    display: inline-block;
+}
+
+.mypic {
+    width: 40%;
+    vertical-align: top;
+    margin: 20px;
+    border: 5px solid lightgray;
+}
+
+.about {
+    width: 50%;
+    margin: 20px;
+    
+}
+
+h3 {
+    background-image: linear-gradient(rgb(176,176,180), rgb(135,132,147));
+    color: white;
+    padding: 10px;
+}
+
+h5 {
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+p {
+    background-image: linear-gradient(to right, rgb(255, 255, 255), rgba(254, 220, 255, 0.788));
+    padding: 10px;
+    min-height: 70px;
+    font-family: serif;
+}
+
+.lamode {
+    width:30%;
+    background-image: linear-gradient(to right, rgb(255, 255, 255), rgba(254, 220, 255, 0.788));
+    margin: 10px 0px 30px 22px;
+}
+
+.lamodeimg {
+    width: 300px;
+}
+.tools {
+    width: 40px; 
+    margin-left: 10px;
+    margin-top: 10px;
+}
+
+button {
+    background-color: seagreen;
+    width: 130px;
+    height: 30px;
+    margin: 10px 10px 10px 80px;
+    text-align: center;
+    border-radius: 10px;
+    color: white;
+    border: 1px solid black;
+}
+
+.footer {
+    width: 100%;
+    background-color: rgb(226, 226, 226);
+    text-align: center;
+}
+
+.logo {
+    width: 20px;
+    margin: 2px;
+}
+
+a {
+    color: black;
+}

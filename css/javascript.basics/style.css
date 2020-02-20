@@ -1,0 +1,86 @@
+* {
+    margin: 0 auto;
+}
+
+#ipsum1 {
+    color: white;
+}
+
+h1, h2 {
+    color: white;
+}
+
+p {
+    color: lightblue;
+}
+
+body {
+    background-color: darkblue;
+    width: 970px;
+}
+.one {
+ background-color: crimson;
+ border-radius: 7px;
+ padding: 10px;
+ margin: 10px;
+ width: 94%;
+}
+
+.two {
+ background-color: teal;
+ color: lightblue;
+ border-radius: 7px;
+ width: 25%;
+ display: inline-block;
+ vertical-align: top;
+ margin: 10px;
+ padding: 10px;
+}
+.three {
+    background-color: black;
+    color: white;
+    border-radius: 7px;
+    width: 65%;
+    display: inline-block;
+    margin: 10px;
+    padding: 10px 8px 10px 10px;
+}
+
+.four {
+   background-color: gray;
+   color: white;
+   border-radius: 7px;
+   height: 20px;
+   padding: 10px;
+
+   position: relative;
+   margin-left: 10px;
+   margin-right: 24px;
+}
+
+span {
+    text-decoration: underline;
+    color: turquoise;
+}
+
+a {
+    color: turquoise;
+}
+
+.space {
+margin-bottom: 10px;
+margin-top: 10px;
+}
+
+.space1 {
+    margin-bottom: 10px;
+    color: white;
+    }
+
+.list {
+    display: list-item;
+}
+
+.div1 {
+    margin-left: 20px;
+}

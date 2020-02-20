@@ -1,0 +1,187 @@
+/*CSS reset settings here*/
+* {
+    margin: 0;
+    padding: 0;
+}
+.wrapper {
+    width: 950px;
+    background-color: silver;
+    margin: 0 auto;
+    padding: 20px;
+
+}
+.header {
+    min-height: 150px;
+    background-color: green;
+    width: 100%;
+    margin-bottom: 20px;
+}
+.container {
+    width: 100%;
+}
+.navigation {
+    min-height: 300px;
+    width: 20%;
+    background-color: blue;
+    display: inline-block;
+}
+.main_content {
+    min-height: 400px;
+    width: 75%;
+    background-color: red;
+    vertical-align: top;
+    display: inline-block;
+    margin-left: 4.5%;
+
+}
+.subcontents {
+    min-height: 200px;
+    width: 28%;
+    background-color: yellow;
+    display: inline-block;
+    margin: 10px 0 0 10px;
+    padding: 4px;
+}
+.advertisement {
+    min-height: 120px;
+    width: 91%;
+    background-color: purple;
+    margin: 20px 10px;
+}
+
+/* Responsive */
+
+/* 480px and smaller */
+@media only screen and (max-width: 480px) {
+    .wrapper {
+        width: 100%;
+        background-color: silver;
+        margin: 0 auto;
+        padding: 20px;
+    }
+    .header {
+        width: 100%;
+        min-height: 150px;
+        background-color: green;
+    }
+    .container {
+        width: 100%;
+    }
+    .navigation {
+        display: none;
+    }
+    .main-content {
+        display: block;
+        margin-top: 20px;
+        min-height: 400px;
+        width: 100%;
+        background-color: red;
+       
+    }
+    .subcontents {
+        margin: 20px 0 0 20px;
+        display: inline-block;
+        min-height: 200px;
+        width: 90%;
+        background-color: yellow;
+    }
+    .advertisement {
+        margin: 20px;
+        min-height: 120px;
+        width: 90%;
+        background-color: purple;
+    }
+}
+
+/* 481px to 1023px */
+@media only screen and (min-width: 481px) {
+    .wrapper {
+        width: 100%;
+        background-color: silver;
+        margin: 0 auto;
+        padding: 20px;
+    }
+    .header {
+        width: 90%;
+        min-height: 150px;
+        background-color: green;
+    }
+    .container {
+        width: 100%;
+    }
+    .navigation {
+        display: none;
+    }
+    .main-content {
+        display: block;
+        margin-top: 20px;
+        min-height: 400px;
+        width: 100%;
+        background-color: red;
+
+    }
+    .subcontents {
+        margin: 20px 0 0 20px;
+        display: inline-block;
+        min-height: 200px;
+        width: 45%;
+        background-color: yellow;
+    }
+    .advertisement {
+        margin: 20px;
+        min-height: 120px;
+        width: 90%;
+        background-color: purple;
+    }
+    }
+
+/* 1024 and bigger */
+@media only screen and (min-width: 1024px) {
+    .wrapper {
+        width: 950px;
+        background-color: silver;
+        margin: 0 auto;
+        padding: 20px;
+    
+    }
+    .header {
+        min-height: 150px;
+        background-color: green;
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .container {
+        width: 100%;
+    }
+    .navigation {
+        min-height: 300px;
+        width: 20%;
+        background-color: blue;
+        display: inline-block;
+    }
+    .main_content {
+        min-height: 400px;
+        width: 75%;
+        background-color: red;
+        vertical-align: top;
+        display: inline-block;
+        margin-left: 4.5%;
+    
+    }
+    .subcontents {
+        min-height: 200px;
+        width: 28%;
+        background-color: yellow;
+        display: inline-block;
+        margin: 10px 0 0 10px;
+        padding: 4px;
+    }
+    .advertisement {
+        min-height: 120px;
+        width: 91%;
+        background-color: purple;
+        margin: 20px 10px;
+    }
+    
+    }

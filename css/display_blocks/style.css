@@ -1,0 +1,46 @@
+* {
+    margin: 0 auto;
+    padding: 0;
+
+}
+/* background color and size for whole doc */
+.container {
+    background-color: #D5D1AE;
+    padding: 20px;
+    text-align: center;
+    width: 650px;
+}
+/* Header */
+.header h1,
+.header img {
+    display: inline-block;
+    padding-bottom: 10px;
+}
+
+.header img {
+    width: 100px;
+    height: 50px;
+    background-color: white;
+}
+/* Universal image sizing */
+.row1 img,
+.row2 img,
+.row3 img,
+.row4 img {
+    width: 100px;
+    height: 100px;
+}
+
+/* For images with white background */
+.white {
+    background-color: lightblue;
+    padding: 10px;
+    border: 3px solid black;
+}
+/* For images with blank backgrounds adding red */
+.blank {
+    background-color: lightcoral;
+    border: 3px solid black;
+    padding: 10px;
+
+}
