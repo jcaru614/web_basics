@@ -1,0 +1,24 @@
+#ocean {
+	background-image: url("space.gif");
+	width: 900px;
+	height: 700px;
+}
+.player {
+	background-image: url("player.gif");
+	width: 150px;
+	height: 106px;
+	position: absolute;
+}
+
+.enemy {
+	background-image: url("enemy.gif");
+	width: 150px;
+	height: 102px;
+	position: absolute;
+}
+.missile {
+	background-color: greenyellow;
+	width: 2px;
+	height: 15px;
+	position: absolute;
+}

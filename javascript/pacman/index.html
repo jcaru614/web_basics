@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Pacman</title>
+    <style type="text/css">
+        * {
+            margin: 0px;
+            padding: 0px;
+            background-color: black;
+        }
+
+        h1 {
+            color: white;
+        }
+
+        .row {
+            line-height: 0;
+        }
+
+        .wall {
+            background-color: darkblue;
+            height: 40px;
+            width: 40px;
+            display: inline-block;
+        }
+
+        .avocado {
+            background-color: black;
+            height: 40px;
+            width: 40px;
+            display: inline-block;
+            background-image: url('avocado.gif');
+            background-size: contain;
+        }
+
+        .banana {
+            background-color: black;
+            height: 40px;
+            width: 40px;
+            display: inline-block;
+            background-image: url('banana.gif');
+            background-size: contain;
+        }
+
+        .blank {
+            background-color: black;
+            height: 40px;
+            width: 40px;
+            display: inline-block;
+        }
+
+        #enemy1 {
+            background-color: black;
+            height: 40px;
+            width: 40px;
+            display: inline-block;
+            background-image: url('red.gif');
+            background-size: contain;
+            position: absolute;
+            left: 40px;
+            top: 40px;
+        }
+
+        #enemy2 {
+            background-color: black;
+            height: 40px;
+            width: 40px;
+            display: inline-block;
+            background-image: url('yellow.gif');
+            background-size: contain;
+            position: absolute;
+            left: 40px;
+            top: 40px;
+        }
+
+        #enemy3 {
+            background-color: black;
+            height: 40px;
+            width: 40px;
+            display: inline-block;
+            background-image: url('blue.gif');
+            background-size: contain;
+            position: absolute;
+            left: 40px;
+            top: 40px;
+        }
+
+        #pacman {
+            background-color: black;
+            height: 40px;
+            width: 40px;
+            display: inline-block;
+            background-image: url('pacman.gif');
+            background-size: contain;
+            position: absolute;
+            left: 40px;
+            top: 40px;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <div id="world"> </div>
+    <div id="pacman"></div>
+    <div id="enemy1"></div>
+    <div id="enemy2"></div>
+    <div id="enemy3"></div>
+    <div>
+        <h1 id="title">Score: 0</h1>
+    </div>
+    <div>
+        <h1 id="lives">Lives: 3</h1>
+    </div>
+
+    <script type="text/javascript">
+
+        function random(max, min) {
+            return Math.floor(Math.random() * (max - min + 1)) + min;
+        }
+
+        var world = [
+            [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1],
+            [1, 0, random(1, 4), random(-1, 4), random(1, 4), random(-1, 4), random(-1, 4), random(1, 4), random(-1, 4), random(1, 4), 1],
+            [1, random(1, 4), random(-1, 4), random(-1, 4), random(-1, 4), random(-1, 4), random(-1, 4), random(-1, 4), random(-1, 4), random(1, 4), 1],
+            [1, random(1, 4), random(-1, 4), random(-1, 4), random(-1, 4), random(-1, 4), random(-1, 4), random(-1, 4), random(-1, 4), random(1, 4), 1],
+            [1, random(1, 4), random(-1, 4), random(-1, 4), random(-1, 4), random(-1, 4), random(-1, 4), random(-1, 4), random(-1, 4), random(1, 4), 1],
+            [1, random(1, 4), random(-1, 4), random(-1, 4), random(-1, 4), random(-1, 4), random(-1, 4), random(-1, 4), random(-1, 4), random(1, 4), 1],
+            [1, random(1, 4), random(-1, 4), random(-1, 4), random(-1, 4), random(-1, 4), random(-1, 4), random(-1, 4), random(-1, 4), random(1, 4), 1],
+            [1, random(1, 4), random(-1, 4), random(-1, 4), random(-1, 4), random(-1, 4), random(-1, 4), random(-1, 4), random(-1, 4), 0, 1],
+            [1, random(1, 4), random(-1, 4), random(-1, 4), random(-1, 4), random(-1, 4), random(-1, 4), random(-1, 4), random(-1, 4), random(1, 4), 1],
+            [1, random(1, 4), random(1, 4), random(-1, 4), random(-1, 4), random(1, 4), random(-1, 4), random(1, 4), random(-1, 4), random(1, 4), 1],
+            [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1],
+        ];
+
+        var worldDict = {
+            0: 'blank',
+            1: 'wall',
+            2: 'avocado',
+            3: 'banana',
+        }
+
+
+        function drawWorld() {
+            output = "";
+            for (var row = 0; row < world.length; row++) {
+                output += "<div class = 'row'>"
+                for (var x = 0; x < world[row].length; x++) {
+                    output += "<div class = '" + worldDict[world[row][x]] + "'></div>"
+                }
+                output += "</div>"
+            }
+            document.getElementById('world').innerHTML = output;
+        }
+        drawWorld();
+
+
+        var pacman = {
+            x: 1,
+            y: 1
+        }
+
+        var enemy1 = {
+            x: 9,
+            y: 9
+        }
+
+        var enemy2 = {
+            x: 4,
+            y: 9,
+        }
+
+        var enemy3 = {
+            x: 9,
+            y: 3
+        }
+
+        var score = 0;
+
+        var lives = 3;
+
+        function drawPacman() {
+            document.getElementById("pacman").style.top = pacman.y * 40 + 'px'
+            document.getElementById("pacman").style.left = pacman.x * 40 + 'px'
+        }
+        drawPacman()
+
+        function drawenemy1() {
+            document.getElementById("enemy1").style.top = enemy1.y * 40 + 'px'
+            document.getElementById("enemy1").style.left = enemy1.x * 40 + 'px'
+        }
+        drawenemy1();
+
+        function drawenemy2() {
+            document.getElementById("enemy2").style.top = enemy2.y * 40 + 'px'
+            document.getElementById("enemy2").style.left = enemy2.x * 40 + 'px'
+        }
+        drawenemy2();
+
+        function drawenemy3() {
+            document.getElementById("enemy3").style.top = enemy3.y * 40 + 'px'
+            document.getElementById("enemy3").style.left = enemy3.x * 40 + 'px'
+        }
+        drawenemy3();
+
+        document.onkeydown = function (e) {  // movement of ninja
+            if (e.keyCode == 37) { //left
+                if (world[pacman.y][pacman.x - 1] != 1) {
+                    pacman.x--;
+                    enemy1.x++;
+                    enemy3.x++;
+                }
+            }
+            if (e.keyCode == 39) { //right
+                if (world[pacman.y][pacman.x + 1] != 1) {
+                    pacman.x++;
+                    enemy1.x--;
+                    enemy3.x--;
+                }
+            }
+            if (e.keyCode == 40) { //down
+                if (world[pacman.y + 1][pacman.x] != 1) {
+                    pacman.y++;
+                    enemy1.y--;
+                    enemy2.y--;
+                }
+            }
+            if (e.keyCode == 38) { //up
+                if (world[pacman.y - 1][pacman.x] != 1) {
+                    pacman.y--;
+                    enemy1.y++;
+                }
+            }
+            if (world[pacman.y][pacman.x] === 2) {  // update score of sushi
+                world[pacman.y][pacman.x] = 0;
+                var tom1 = new Audio("pacman_chomp.wav");
+                tom1.play();
+                score = score + 10
+                document.getElementById('title').innerHTML = "Score " + score;
+            } else if (world[pacman.y][pacman.x] === 3) { //update score of nigiri
+                world[pacman.y][pacman.x] = 0;
+                var tom2 = new Audio("pacman_chomp.wav");
+                tom2.play();
+                score = score + 5
+                document.getElementById('title').innerHTML = "Score " + score;
+            } if ((pacman.x === enemy1.x) && (pacman.y === enemy1.y) || (pacman.x === enemy2.x) && (pacman.y === enemy2.y) || (pacman.x === enemy3.x) && (pacman.y === enemy3.y)) {  //update score of ghost
+                lives = lives - 1
+                var tom3 = new Audio("pacman_eatghost.wav");
+                tom3.play();
+                document.getElementById('lives').innerHTML = "Lives " + lives;
+            } else if (lives === 0) {
+                document.write("Game over! Your score is " + score + ". Refresh to start again.")
+                var tom4 = new Audio("pacman_death.wav");
+                tom4.play();
+            }
+
+            drawPacman();
+            drawWorld();
+            drawenemy1();
+            drawenemy2();
+            drawenemy3();
+        }
+
+
+    </script>
+
+</body>
+
+</html>
