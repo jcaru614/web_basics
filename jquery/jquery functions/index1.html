@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>jquery</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+</head>
+
+<style>
+
+* {
+    margin: 0 auto;
+    padding: 0;
+    text-align: center;
+}
+
+h1, h2, p, button, img {
+    margin: 10px;
+}
+
+.red {
+    color: red;
+}
+
+button{
+    width: 200px;
+    height: 50px;
+    background-color: purple;
+    color: white;
+    border-radius: 10px;
+}
+
+div {
+    border-top: 2px solid black;
+    padding: 20px;
+}
+
+.tinky {
+    width: 15%;
+    display: none;
+}
+
+</style>
+
+
+<body>
+
+<div class="section1">
+    <h1>Add Class</h1>
+    <button>addClass</button>
+    <p>click button to add class of red</p>
+</div>
+
+<div class="section2">
+    <h1>Slide Toggle</h1>
+    <button class="button2">SlideToggle</button>
+    <p>click the button to slide toggle a hidden image</p>
+    <img class="tinky" src="iphone6.png" alt="tinky">
+</div>
+
+<div class="section3">
+    <h1>Append</h1>
+    <button class="button3">append</button>
+    <p class="append">How did Epstein kill himself?</p>
+</div>
+
+<div class="section4">
+    <h2>THIS! CLICK THIS TO FADE THIS OUT!</h2>
+</div>
+
+
+<script>
+    // set boolean to false then change to true to switch 
+var myBool = false;
+
+$(".section1 button").click(function(array){
+    if(myBool == false) {
+        $(".section1 p").addClass("red");
+        $(".section1 p").html("<h1>Joey is awesome!</h1>"); //.text just changes text .html lets you change selector
+        $(".section1 button").text("click to remove class");
+        myBool = true;
+    } else { 
+        $(".section1 p").removeClass("red");
+        $(".section1 button").text("click to add class");
+        myBool = false;
+    }
+});
+
+
+$(".button2").click(function(){
+        $(".tinky").toggle();
+});
+
+
+$(".button3").click(function(){
+    if ( myBool == false) {
+        $('.append').append('<p class="remove">He didnt</p>');
+        myBool = true;
+    } else {
+        $(".remove").hide()
+        myBool = false;
+    }
+    
+   
+});
+
+$("h2").click(function(){
+    $(this).fadeOut();
+});
+
+</script>
+
+    
+</body>
+</html>

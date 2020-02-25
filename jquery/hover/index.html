@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script> 
+    <title>Hover</title>
+
+<style>
+* {
+    margin: 0px auto;
+    padding: 0;
+}
+
+img {
+    width: 24%;
+    height: 200px;
+    margin: 5px;
+}
+
+div {
+    text-align: center;
+}
+h1 {
+    margin: 20px;
+}
+
+.fireworks{
+    display: none;
+}
+</style>
+
+
+</head>
+<body>
+    
+    <div>
+        <h1>Hover over a flag to change the image</h1>
+        <img class="usa" src="usa.png" alt="" class="original">
+        <img class="usa" src="usa.png" alt="" class="original">
+        <img class="usa" src="usa.png" alt="" class="original">
+        <img class="usa" src="usa.png" alt="" class="original">
+    </div>
+
+
+    <script>
+
+var myBool = false;
+
+function random(max, min) {
+    return Math.floor(Math.random() * (max - min + 1)) + min;
+}
+
+var myDict = {
+    1: "eagle.jpg",
+    2: "fireworks.gif",
+    3: "country.jpg"
+}
+
+var randomImage = myDict[random(0, 3)]
+
+$('.usa').hover(function () {
+    if (myBool == false) {
+        $(this).attr("src", "" + randomImage + "")
+        $('.fireworks').show()
+        $('body').css("background-color", "black")
+        $('h1').css("color", "white")
+        myBool = true;
+    } else if (myBool == true) {
+        $(this).attr("src", "usa.png")
+        $(".fireworks").hide()
+        myBool = false;
+    }
+});
+
+    
+</script>
+
+</body>
+</html>
