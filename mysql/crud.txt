@@ -1,0 +1,14 @@
+USE lead_gen_business;
+
+
+SELECT * from clients;
+
+INSERT INTO clients (first_name, last_name, email, joined_datetime)
+VALUES ('joey', 'caruana', 'joey@gmail.com', NOW());
+
+UPDATE clients SET first_name = 'sponge', last_name = 'bob', email = 'squarepants@gmail.com', joined_datetime = NOW()
+WHERE id = 10;
+
+SELECT * FROM billing:
+
+DELETE FROM billing WHERE amount < 500;
