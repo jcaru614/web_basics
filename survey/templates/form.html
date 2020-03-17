@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <title>Form</title>
+</head>
+<body>
+
+<div class="container">
+    <!-- all bootstrap needs to go in a container -->
+    <div class="jumbotron">
+        <h1 class="display-4">Take this quick survey</h1>
+        <!-- every form must have an action sending it to the next page and a POST method since we doing post request -->
+        <form action="/result" method="POST">
+            <div class="form-group">
+              <label for="name">Your Name</label>
+              <input name="name" type="text" class="form-control" id="exampleFormControlInput1" placeholder="Type your name here!">
+            <!-- the input gets a name so we can request it  -->
+            </div>
+            <div class="form-group">
+              <label for="location">Select your location</label>
+              <select name="location" class="form-control" id="exampleFormControlSelect1">
+                <!-- the selection gets a name so we can request it we use that name attributer in ginga on next page -->
+                <option value="San Jose" >San Jose</option>
+                <option value="San Francisco" >San Francisco</option>
+                <option value="New York" >New York</option>
+                <option value="Miami" >Miami</option>
+                <option value="Austin" >Austin</option>
+                <!-- use values since that is what will display when we submit form on the result page -->
+              </select>
+            </div>
+            <div class="form-group">
+                <label for="language">Choose your favorite language</label>
+                <select name="language" class="form-control" id="exampleFormControlSelect1">
+                    <!-- the selection gets a name so we can request it  -->
+                  <option value="Python" >Python</option>
+                  <option value="NodeJs" >NodeJs</option>
+                  <option value="Java" >Java</option>
+                  <option value="C#" >C#</option>
+                  <option value="Ruby" >Ruby</option>
+                   <!-- use values since that is what will display when we submit form on the result page -->
+                </select>
+              </div>
+            <div class="form-group">
+              <label for="comment">Tell us about your self!</label>
+              <textarea name="comment" class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+            <!-- the text area gets a name so we can request it  -->
+            </div>
+            <input class="btn btn-primary" type="submit" value="Submit Form">
+            <!-- use type submit for buttons -->
+          </form>
+          
+    </div>
+    
+</div>
+    
+
+
+
+</body>
+</html>
+
+<!-- method post send it through the body not the url
+if you dont specify post then its automatialy get request -->
