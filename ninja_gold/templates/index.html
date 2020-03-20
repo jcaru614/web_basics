@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ninja Gold</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <style>
+
+        .gold {
+            background: linear-gradient(to right, #BF953F, #FCF6BA, #B38728, #FBF5B7, #AA771C);
+        }
+
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="jumbotron jumbotron-fluid">
+            <div class="container">
+                <h1 class="display-4">Ninja Gold</h1>
+                <p class="lead">Make your Ninja earn some gold by clicking in the options below</p>
+            </div>
+        </div>
+        <h4>Your gold: {{gold}}
+            <div class="progress">
+                <div class="progress-bar progress-bar-striped gold" role="progressbar" aria-valuenow="75"
+                    aria-valuemin="0" aria-valuemax="100" style="width: 100%"></div>
+            </div>
+        </h4>
+        <div class="container">
+            <div class="form-inline card-deck mb-3 text-center">
+                <form class="card mb-3 shadow-sm" action="/money" method="POST">
+                    <h3 class="card-header">Farm</h3>
+                    <p>Earns 10-20 golds</p>
+                     <!-- use the name as a key and its value is farm -->
+                    <input type="hidden" name="building" value="farm">
+                    <button type="submit" class="btn btn-primary gold">Find Gold</button>
+                </form>
+                <form class="card mb-3 shadow-sm" action="/money" method="POST">
+                    <h3 class="card-header">Cave</h3>
+                    <p>Earns 5-10 golds</p>
+                    <input type="hidden" name="building" value="cave">
+                    <button type="submit" class="btn btn-primary gold">Find Gold</button>
+                </form>
+                <form class="card mb-3 shadow-sm" action="/money" method="POST">
+                    <h3 class="card-header">House</h3>
+                    <p>Earns 2-5 golds</p>
+                    <input type="hidden" name="building" value="house">
+                    <button type="submit" class="btn btn-primary gold">Find Gold</button>
+                </form>
+                <form class="card mb-3 shadow-sm" action="/money" method="POST">
+                    <h3 class="card-header">Casino</h3>
+                    <p>Earns or loses 0-50 golds</p>
+                    <input type="hidden" name="building" value="casino">
+                    <button type="submit" class="btn btn-primary gold">Find Gold</button>
+                </form>
+
+            </div>
+            <form action="/clear" method="POST">
+                <button type="submit" class="btn btn-primary btn-lg btn-block">Clear Gold</button>
+            </form>
+        </div>
+
+    </div>
+
+</body>
+
+</html>
