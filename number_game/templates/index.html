@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <title>Number Game</title>
+    <style>
+       * {
+           padding: 10px;
+       }
+
+       button {
+           text-align: center;
+       }
+    </style>
+
+</head>
+<body>
+    <div class="container">
+        <div class="jumbotron jumbotron-fluid">
+            <div class="container">
+                <h1>Welcome to the Great Number Game</h1>
+                <h3>I am thinking of a number between 1 and 100</h3>
+                <p>Take a guess!</p>
+                <form action="/guess"  method = 'POST'>
+                    <input name='guess' type="text">
+                    <button type="submit" class="btn btn-dark">Submit</button>
+                </form>
+
+                
+            </div>
+          </div>
+
+    </div>
+</body>
+</html>
