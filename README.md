@@ -1,7 +1,3 @@
-These are some of the projects and assignments I worked on during my software development bootcamp. 
+These are some of the assignments and things I practiced before and during my Bootcamp
 
-Bootcamp assignments:
-
-Web Fundementals - HTML, CSS, JS, Jquery and SQL
-
-Python, Flask
+Web Fundementals - HTML, CSS, JS, Jquery and SQL, Python
