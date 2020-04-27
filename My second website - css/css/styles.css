@@ -1,0 +1,135 @@
+body {
+  margin: 0;
+  font-family: 'Merriweather', serif;
+}
+
+h1 {
+  margin: 5px auto 0 auto;
+  font-size: 5.5rem;
+  font-family: 'Sacramento', cursive;
+  color: #66bfbf;
+  line-height: 1;
+}
+h2 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.5rem;
+  color: #66bfbf;
+}
+h3 {
+  font-family: 'Montserrat', Montserrat;
+  color: #11999E;
+}
+
+hr {
+    border-style: dotted none none;
+    border-width: 5px;
+    border-color: gray;
+    width: 50%;
+  }
+
+.topcontainer {
+  text-align: center;
+  position: relative;
+  padding-top: 100px;
+  background: radial-gradient(circle, rgba(249,255,254,1) 55%, rgba(188,238,229,1) 100%);
+
+}
+
+.middle-container {
+  background-color: white;
+}
+
+.contact-me {
+  padding: 10px;
+  background: radial-gradient(circle, rgba(240,251,249,1) 45%, rgba(188,238,229,1) 95%);
+}
+
+.get-in-touch {
+  margin-top: 20px;
+  margin-bottom: 0;
+}
+
+.bottom-container {
+  padding: 15px;
+  background: radial-gradient(circle, rgba(240,251,249,1) 45%, rgba(188,238,229,1) 95%);
+
+}
+
+.pic {
+  width: 150px;
+  margin-top: 10px;
+}
+.logo {
+  width: 75px;
+  position: absolute;
+  top: 25px;
+  left: 25px;
+}
+
+.top-octopus {
+  width: 150px;
+  position: absolute;
+  right: 190px;
+  top: 150px;
+
+}
+.bottom-octopus {
+  position: absolute;
+  left: 150px;
+  top: 250px;
+}
+.ship {
+  margin-top: 25px;
+  width: 500px;
+}
+.computer {
+  width: 30%;
+  float: left;
+  margin-right: 40px;
+
+}
+.brewing {
+  width: 40%;
+  float: right;
+  margin-left: 30px;
+}
+
+.footer-link{
+  color: #11999E;
+}
+.btn{
+  color: #11999E;
+}
+
+.skill-row {
+  height: 170px;
+  width: 50%;
+  margin: 100px auto 100px auto;
+  line-height: 2;
+  text-align: left;
+}
+
+.contactbutton{
+  border: 5px solid #65bfbf;
+  width: 180px;
+  height: 60px;
+  background: white;
+  font-family: "Montserrat";
+  font-size: 20px;
+  cursor: pointer;
+  margin: 10px;
+  border-radius: 5%;
+}
+.contactbutton:hover {
+ background: #edffff;
+ color: #65bfbf;
+   }
+
+.bottom-icons {
+  height: 50px;
+  padding: 5px;
+}
+.bottom-icons:hover {
+  width: 4%;
+  height: 4%;
+}
