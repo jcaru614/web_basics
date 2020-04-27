@@ -1,0 +1,50 @@
+/**********************TAG SELECTORS*******************/
+
+
+body {
+    background-color: #eafef3;
+  }
+
+hr {
+    border-style: dotted none none;
+    border-width: 5px;
+    border-color: gray;
+    width: 30%;
+  }
+/**********************Classes*********************/
+
+.mypic  {
+border-radius: 50%;
+height: 225px;
+}
+
+.tinky  {
+  height: 300px;
+  width: 250px;
+}
+
+.beer  {
+  height: 300px;
+  width: 250px;
+}
+
+h1 {
+  color: #00918e;
+  font-family: sans-serif;
+}
+
+h3 {
+  color: #00918e;
+  font-family: sans-serif;
+}
+
+h6 {
+  font-size: 30px;
+}
+
+
+/**********************ID SELECTORS*******************/
+
+#heading {
+  color: Black;
+}
