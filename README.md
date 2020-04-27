@@ -1,3 +1,3 @@
-These are some of the assignments and things I practiced before and during my Bootcamp
+Here are some of the web projects and practice I did before and during my Bootcamp
 
-HTML, CSS, JS, Jquery, SQL, Flask, Python, MongoDB, Express, Node.js
+HTML, CSS, Javascript, Jquery, SQL, Flask, Python, MongoDB, Express, Node.js
