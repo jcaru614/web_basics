@@ -1,0 +1,24 @@
+body {
+    background-color: lightblue;
+    min-height: 70vh;
+    padding: 1rem;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: hsl(198, 1%, 29%);
+    font-family: "Architects Daughter", cursive;
+    text-align: center;
+    font-size: 130%;
+  }
+
+  button{
+      height: 50px;
+      width: 200px;
+      border-radius: 10px;
+      background-color: yellow;
+  }
+
+  li {
+      display: inline-block;
+  }
